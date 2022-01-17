@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  cout << "Welcome to the calorimetry calculator" << endl;
+  cout << "This program assumes that you are at equilibiurm, in other words -qa = qb" << endl; 
+  cout << "Which are you trying to solve for?" << endl; 
+  cout << "1. Final temperature" << endl; 
+  cout << "2. Specific heat capacity" << endl; 
+  cout << "3. Mass" << endl; 
+  cout << "4. Quit" << endl; 
+  int choice1; 
+  cin >> choice1; 
+    if(choice1 == 1) {
+      cout << "Please enter the mass (in grams) of solution A" << endl; 
+      double massA; 
+      cin >> massA; 
+      cout << "Please enter the specific heat capacity of solution A (in J/gC)" << endl; 
+      double heatcapA; 
+      cin >> heatcapA;
+      cout << "Please enter the initial temperature of solution A (in degrees celsius)" << endl; 
+      double initialtempA; 
+      cin >> initialtempA; 
+      cout << "Please enter the mass (in grams) of solution B" << endl; 
+      double massB; 
+      cin >> massB; 
+      cout << "Please enter the specific heat capacity of solution B (in J/gC)" << endl; 
+      double heatcapB; 
+      cin >> heatcapB;
+      cout << "Please enter the initial temperature of solution B (in degrees celsius)" << endl;
+      double initialtempB; 
+      cin >> initialtempB; 
+
+      double finaltemp; 
+      finaltemp = ((-massB * heatcapB * initialtempB) - (massA * heatcapA * initialtempA)) /  (( -massA * heatcapA) - (massB * heatcapB)); 
+
+      cout << "Your final temperature is:" << finaltemp << endl; 
+    }
+
+  } 
